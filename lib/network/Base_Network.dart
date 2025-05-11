@@ -14,7 +14,7 @@ class BaseNetwork {
       return data[endpoint] ?? []; // Return the decoded data
     } else {
       throw Exception(
-        "Failed to load data",
+        "Failed to load data Error: ${response.statusCode}",
       ); // Throw an exception if the request fails
     }
   }

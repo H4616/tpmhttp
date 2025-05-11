@@ -14,7 +14,7 @@ class AnimePresenter {
 
   Future<void> loadAnimeData(String endpoint) async {
     try {
-      final List<dynamic> data = await BaseNetwork.getData("endpoint");
+      final List<dynamic> data = await BaseNetwork.getData(endpoint);
       final animeList = data.map((json) => Anime.fromJson(json)).toList();
       view.showAnimeList(animeList);
     } catch (e) {
